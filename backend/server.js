@@ -2,11 +2,19 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
 
 // express app
 const app = express()
+app.use(cors(
+  {
+    origin:["https://workout-alpha-plum.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+))
 
 // middleware
 app.use(express.json())
