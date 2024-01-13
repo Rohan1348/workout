@@ -10,7 +10,7 @@ const userRoutes = require('./routes/user')
 const app = express()
 app.use(cors(
   {
-    origin:["https://workout-alpha-plum.vercel.app"],
+    origin:["https://workout-frontend-ruddy.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
   }
